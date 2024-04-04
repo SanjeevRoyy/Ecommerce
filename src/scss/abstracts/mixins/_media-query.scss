@@ -1,3 +1,4 @@
+// ! Breakpoints
 $BreakPoints: (
   "xs":0,
   "sm": "max-width: 599.990px",
@@ -6,16 +7,16 @@ $BreakPoints: (
 );
 
 @mixin media-query($size) {
-    $myMap: map-get(
-      $BreakPoints,
-      $size
-    ); // Corrected from abs.$BreakPoints to $BreakPoints
-    @if $myMap {
-      @media (#{$myMap}) {
-        // Corrected from #{myMap} to #{$myMap}
-        @content;
-      }
-    } @else {
-      @error "Invalid Breakpoint! #{$size} not defined";
+  $myMap: map-get(
+    $BreakPoints,
+    $size
+  ); // Corrected from abs.$BreakPoints to $BreakPoints
+  @if $myMap {
+    @media (#{$myMap}) {
+      // Corrected from #{myMap} to #{$myMap}
+      @content;
     }
+  } @else {
+    @error "Invalid Breakpoint! #{$size} not defined";
   }
+}
