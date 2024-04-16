@@ -9,7 +9,7 @@ const Navbar = () => {
         <Link to="/">Home</Link>
         <Link to="/about">Categories</Link>
         <Link to="/contact">Contact</Link>
-        <Link to="/portfolio">Portfolio</Link>
+        <Link to="/portfolio">cart</Link>
         <Link to="/login">Login</Link> 
        <div className='hamburger'>
        <RxHamburgerMenu size={30} />

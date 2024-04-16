@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Navbar from '../../components/Navbar';
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -38,6 +39,8 @@ const Login = () => {
     }
 
     return (
+      <>
+      <Navbar/>
     <div className='ForBg'>
         <div className="login-form">
             <form onSubmit={handleLogin}>
@@ -69,6 +72,7 @@ const Login = () => {
             </form>
         </div>
         </div>
+        </>
     );
 }
 

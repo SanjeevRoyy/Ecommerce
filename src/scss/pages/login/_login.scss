@@ -11,13 +11,19 @@
    
   }
   .ForBg{
-    margin-top: -65px;
+
+   
     width: 100%;
     height: 110vh;
+    background-color: #cccccc;
+
+    // opacity: 0.8;
     background-image: url('img/login.avif');
+    
   }
   
   .login-form {
+    opacity: 100%;
     background: #fff;
     min-width: 300px;
     max-width: 500px;

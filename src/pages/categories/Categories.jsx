@@ -12,11 +12,11 @@ const Categories = () => {
     const [products, setProducts] = useState([]);
 
 
-    //   const {addToCart}= useCart();
+      const {addToCart}= useCart();
 
-    //   const addProduct = () =>{
-    //     // setItem[...setItems]
-    //   }
+      const addProduct = () =>{
+        // setItem[...setItems]
+      }
 
 
     const fetchproduct = (addProduct) => {
@@ -55,7 +55,7 @@ const Categories = () => {
 
     const handleCategoryClick = (category) => {
         setSelectedCategory(category);
-        fetchProductsByCategory(category); ``
+        fetchProductsByCategory(category); 
     };
     const handleAddToCart = (product) => {
         addToCart(product); // Call addToCart from CartContext
@@ -64,7 +64,7 @@ const Categories = () => {
 
 
     return (<>
-        <Navbar />
+  <Navbar/>
         <div className="categories-container">
          
                       <div className='category-image'>
@@ -109,7 +109,7 @@ const Categories = () => {
                 ))}
             </div>
         </div>
-    </>
+        </>
     );
 };
 
