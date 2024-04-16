@@ -83,6 +83,7 @@ const Categories = () => {
             <div className="category-list">
                 {categories.map((category, index) => (
                     <button
+                
                         key={index}
                         className={selectedCategory === category ? 'active' : ''}
                         onClick={() => handleCategoryClick(category)}
