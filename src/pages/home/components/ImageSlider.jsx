@@ -15,7 +15,7 @@ const ImageSlider = () => {
   };
 
   return (
-    <div>
+    <div className='slider'>
       
       <Slider {...settings}>
         <div>

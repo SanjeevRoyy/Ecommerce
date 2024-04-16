@@ -33,16 +33,19 @@
   .product-title {
     font-size: 18px;
     margin: 10px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
   .product-price {
     font-weight: bold;
-    color: #007bff;
+    color: black;
   }
   
   .add-to-cart-btn {
-    background-color: #007bff;
-    color: white;
+    background-color: rgb(252, 182, 31);
+    color: black;
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -53,6 +56,6 @@
   }
   
   .add-to-cart-btn:hover {
-    background-color: #0056b3;
+    opacity: 0.6
   }
   
