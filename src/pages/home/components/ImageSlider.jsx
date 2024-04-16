@@ -12,6 +12,8 @@ const ImageSlider = () => {
     slidesToScroll: 1,
     autoplay: true, // Auto slide
     autoplaySpeed: 1000, // Time between slides in milliseconds (2 seconds)
+    pauseOnHover: false
+    
   };
 
   return (
