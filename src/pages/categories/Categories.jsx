@@ -68,16 +68,16 @@ const Categories = () => {
         <div className="categories-container">
          
                       <div className='category-image'>
-                      <img width={100} src='/img/electronics.jpg'></img>
+                      <img width={100} src='/img/e.avif'></img>
                       <div class="vl" style={{ border: "2px solid whitesmoke", height: "50px" }}></div>
       
-                      <img width={100} src='/img/jewellery.jpg'></img>
+                      <img width={100} src='/img/j.jpg'></img>
                       <div class="vl" style={{ border: "2px solid whitesmoke", height: "50px" }}></div>
       
-                      <img width={100}  src='/img/boy.jpg'></img>
+                      <img width={100}  src='/img/m.avif'></img>
                       <div class="vl" style={{ border: "2px solid whitesmoke", height: "50px" }}></div>
       
-                      <img width={100} src='/img/womens.jpg'></img>
+                      <img width={100} src='/img/wm.jpg '></img>
                       <div class="vl" style={{ border: "2px solid whitesmoke", height: "50px" }}></div>
                   </div>
             <div className="category-list">
