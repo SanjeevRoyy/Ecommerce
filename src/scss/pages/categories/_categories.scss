@@ -11,17 +11,20 @@
   }
   
   .category-list button {
-    background-color: #007bff;
-    color: white;
+    // background-color: rgb(252, 182, 31);
+    background: none;
+    color: black;
     border: none;
     padding: 10px 20px;
+    margin: 4px;
+    margin-top: 20px;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
   }
   
   .category-list button.active {
-    background-color: #0056b3;
+  opacity: 0.6;
   }
   
   .product-grid {
@@ -59,16 +62,27 @@
   }
   
   .add-to-cart {
-    background-color: #007bff;
-    color: white;
+    background-color: rgb(252, 182, 31);
+    color: black;
     border: none;
     padding: 8px 16px;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
   }
-  
-  .add-to-cart:hover {
-    background-color: #0056b3;
+  .category-image{
+    display: flex;
+    gap: 14px;
   }
+  .category-image img{
+   object-fit: cover;
+//    background-position: center;  
+top: 40px;
+    border-radius: 50%;
+    
+  }
+  
+//   .add-to-cart:hover {
+//     background-color: #0056b3;
+//   }
   
