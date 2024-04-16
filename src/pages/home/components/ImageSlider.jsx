@@ -21,13 +21,13 @@ const ImageSlider = () => {
       
       <Slider {...settings}>
         <div>
-          <img src="img/slider1.jpg" alt="Image 1" />
+          <img src="img/b4.webp" alt="Image 1" />
         </div>
         <div>
-          <img src="img/slider2.jpg" alt="Image 2" />
+          <img src="img/b2.jpg" alt="Image 2" />
         </div>
         <div>
-          <img src="img/slider3.jpg" alt="Image 3" />
+          <img src="img/b3.jpg" alt="Image 3" />
         </div>
       </Slider>
     </div>

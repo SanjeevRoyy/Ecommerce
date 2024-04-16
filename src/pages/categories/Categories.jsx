@@ -66,20 +66,20 @@ const Categories = () => {
     return (<>
         <Navbar />
         <div className="categories-container">
-            <div className='category-image'>
-                <img width={100} src='/img/electronics.jpg'></img>
-                <div class="vl" style={{ border: "2px solid whitesmoke", height: "50px" }}></div>
-
-                <img width={100} src='/img/jewellery.jpg'></img>
-                <div class="vl" style={{ border: "2px solid whitesmoke", height: "50px" }}></div>
-
-                <img width={100} height={66} src='/img/men.jpg'></img>
-                <div class="vl" style={{ border: "2px solid whitesmoke", height: "50px" }}></div>
-
-                <img width={100} src='/img/womens.jpg'></img>
-                <div class="vl" style={{ border: "2px solid whitesmoke", height: "50px" }}></div>
-
-            </div>
+         
+                      <div className='category-image'>
+                      <img width={100} src='/img/electronics.jpg'></img>
+                      <div class="vl" style={{ border: "2px solid whitesmoke", height: "50px" }}></div>
+      
+                      <img width={100} src='/img/jewellery.jpg'></img>
+                      <div class="vl" style={{ border: "2px solid whitesmoke", height: "50px" }}></div>
+      
+                      <img width={100}  src='/img/boy.jpg'></img>
+                      <div class="vl" style={{ border: "2px solid whitesmoke", height: "50px" }}></div>
+      
+                      <img width={100} src='/img/womens.jpg'></img>
+                      <div class="vl" style={{ border: "2px solid whitesmoke", height: "50px" }}></div>
+                  </div>
             <div className="category-list">
                 {categories.map((category, index) => (
                     <button

@@ -17,7 +17,7 @@
     border: none;
     padding: 10px 20px;
     margin: 4px;
-    margin-top: 20px;
+    margin-top: 10px;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -72,12 +72,13 @@
   }
   .category-image{
     display: flex;
+    width: 100%;
     gap: 14px;
   }
   .category-image img{
    object-fit: cover;
 //    background-position: center;  
-top: 40px;
+    top: 40px;
     border-radius: 50%;
     
   }
