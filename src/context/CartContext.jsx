@@ -10,11 +10,26 @@ export const useCart = () => {
 
 // CartContext provider component
 export const CartProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(localStorage.getItem('cartItems')? JSON.parse(localStorage.getItem('cartItems')):[]);
 
   // Function to add item to cart
   const addToCart = (item) => {
-    setCartItems([...cartItems, item]);
+    const isItemInCart = cartItems.find(sanjeev=>sanjeev.id===item.id)
+    if (isItemInCart){
+      setCartItems(cartItems.map(sanjeev=>sanjeev.id===item.id ? {...sanjeev,quantity:sanjeev.quantity+1}:sanjeev))
+    }
+    else{
+      setCartItems([...cartItems,{...item,quantity:1}])
+    }
+  };
+  const deleteFromCart = (item) => {
+    const isItemInCart = cartItems.find(sanjeev=>sanjeev.id===item.id)
+    if (isItemInCart){
+      setCartItems(cartItems.map(sanjeev=>sanjeev.id===item.id ? {...sanjeev,quantity:sanjeev.quantity-1}:sanjeev))
+    }
+    // else{
+    //   setCartItems([...cartItems,{...item,quantity:1}])
+    // }
   };
 
 //   const removeFromCart = (index) => {
@@ -34,7 +49,7 @@ export const CartProvider = ({ children }) => {
 
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart,setCartItems,removeFromCartById,clearCart }}>
+    <CartContext.Provider value={{ cartItems, addToCart,setCartItems,removeFromCartById,clearCart,deleteFromCart }}>
       {children}
     </CartContext.Provider>
   );

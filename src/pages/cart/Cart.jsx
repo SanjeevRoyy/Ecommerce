@@ -1,11 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useCart } from '../../context/CartContext'
 import Navbar from '../../components/Navbar';
 
 
 const Cart = () => {
-  const { cartItems,removeFromCartById,clearCart } = useCart();
+  const { setCartItems,cartItems,removeFromCartById,clearCart,addToCart,deleteFromCart } = useCart();
+
   
+  useEffect(()=>{
+    localStorage.setItem("cartItems",JSON.stringify(cartItems))
+    
+  },[cartItems])
+  
+  useEffect(()=>{
+    const cartItems = localStorage.getItem("cartItems")
+    if (cartItems) {
+      setCartItems(JSON.parse(cartItems));
+      
+    }
+  },[])
   console.log(cartItems)
 
 
@@ -33,8 +46,13 @@ const Cart = () => {
                 <div className="item-image">
                   <img src={item.image} alt={item.title} />
                 </div>
-                <div className="item-details">
+                <div className="item-details">  
                   <h3>{item.title}</h3>
+                  <h2>{item.quantity}</h2>
+                  <div style={{display:'flex',gap:'10px'}}>
+                  <button style={{background:'black',color:'white',fontSize:'20px', padding:'2px',height:'30px',width:'30px'} } onClick={()=>addToCart(item)}>+</button>
+                  <button style={{background:'black',color:'white',fontSize:'20px',padding:'2px',height:'30px',width:'30px'}} onClick={()=>deleteFromCart(item)}>-</button>
+                  </div>
                   <p>Price: ${item.price}</p>
                 </div>
               </div>
