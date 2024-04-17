@@ -5,17 +5,19 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
+  <>
+
     <div className='NavbarDiv'>
         <Link to="/">Home</Link>
         <Link to="/about">Categories</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/portfolio">cart</Link>
         <Link to="/login">Login</Link> 
-       <div className='hamburger'>
-       <RxHamburgerMenu size={30} />
-       </div>
-
     </div>
+       <div className='hamburger'>
+       <RxHamburgerMenu size={40} />
+       </div>
+       </>
 
   )
 }
