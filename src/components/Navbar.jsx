@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
 // import { Link } from 'react-router-dom
 
 
@@ -27,6 +28,7 @@ const Navbar = () => {
   // };
 
   const [showNavbar, setShowNavbar] = useState(false);
+  const { cartItems } = useCart();
 
   const toggleNavbar = () => {
     setShowNavbar(!showNavbar);
@@ -42,7 +44,7 @@ const Navbar = () => {
         <Link to="/" >Home</Link>
         <Link to="/about">Categories</Link>
         <Link to="/contact">Contact</Link>
-        <Link to="/portfolio">cart</Link>
+        <Link to="/portfolio">cart ({cartItems.length})</Link>
         <Link to="/login">Login</Link>
       </div>
       {/* <div className='HamburgerMenu'>

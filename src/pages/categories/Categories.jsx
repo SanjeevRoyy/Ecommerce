@@ -102,7 +102,7 @@ const Categories = () => {
                         <img src={product.image} alt={product.title} className="product-image" />
                         <div className="product-details">
                             <h3 className="product-title">{product.title}</h3>
-                            <p className="product-price">${product.price}</p>
+                            <p className="product-price">Price:${product.price}</p>
                             <button className="add-to-cart" onClick={() => handleAddToCart(product)}>Add to Cart</button>
                         </div>
                     </div>

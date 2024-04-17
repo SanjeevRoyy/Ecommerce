@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useCart } from '../../context/CartContext';
 // import './SectionProduct.css'; // Create this CSS file for styling
+
 
 const SectionProduct = () => {
   const [products, setProducts] = useState([]);
+  const {addToCart}=useCart()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,7 +32,7 @@ const SectionProduct = () => {
           <div className="product-details">
             <h3 className="product-title">{product.title}</h3>
             <p className="product-price">Price: ${product.price}</p>
-            <button className="add-to-cart-btn">Add to Cart</button>
+            <button onClick={() => addToCart(product)} className="add-to-cart-btn">Add to Cart</button>
           </div>
         </div>
       ))}
