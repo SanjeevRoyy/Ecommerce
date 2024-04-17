@@ -6,14 +6,15 @@ import Contact from './pages/contact/Contact'
 import Login from './pages/login/Login'
 import Categories from './pages/categories/Categories'
 import Cart from './pages/cart/Cart'
+import Protected from './pages/login/Protected'
 
 const Router = () => {
   return (
     <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/about' element={<Categories/>}/>
-        <Route path='/contact' element={<Contact/>}/>
-        <Route path='/portfolio' element={<Cart/>}/>
+        <Route path='/' element={<Protected Component={Home}/>}/>
+        <Route path='/about' element={<Protected Component={Categories}/>}/>
+        <Route path='/contact' element={<Protected Component={Contact}/>}/>
+        <Route path='/portfolio' element={<Protected Component={Cart}/>}/>
         <Route path='/login' element={<Login/>}/>
     </Routes>
   )

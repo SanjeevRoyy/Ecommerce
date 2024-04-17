@@ -7,6 +7,14 @@ import { useCart } from '../context/CartContext';
 
 
 const Navbar = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const handleLogout = () => {
+    // Perform logout actions here
+    setIsLoggedIn(false);
+    // Clear token from localStorage or perform any other necessary logout actions
+    window.localStorage.removeItem("token");
+  };
+
   // const [isNavActive,setIsNavActive]=useState();
   // const navRef = useRef();
 
@@ -45,7 +53,20 @@ const Navbar = () => {
         <Link to="/about">Categories</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/portfolio">cart ({cartItems.length})</Link>
-        <Link to="/login">Login</Link>
+        <div className="nav-auth">
+            {isLoggedIn ? (
+              // If logged in, show Logout
+              <Link to="/" className="nav-link" onClick={handleLogout}>
+                Logout
+              </Link>
+            ) : (
+              // If not logged in, show Login
+              <Link to="/login" className="nav-link">
+                Login
+              </Link>
+            )}
+          </div>
+        {/* <Link to="/login">Login</Link> */}
       </div>
       {/* <div className='HamburgerMenu'>
         <Link to="/">Home</Link>
