@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useCart } from '../../context/CartContext'
+import Navbar from '../../components/Navbar';
 
 
 const Cart = () => {
@@ -18,6 +19,8 @@ const Cart = () => {
 
 
   return (
+    <>
+    <Navbar/>
     <div className="cart-container">
       <h2>Cart</h2>
       {cartItems.length === 0 ? (
@@ -47,6 +50,7 @@ const Cart = () => {
       )}
       <button onClick={handleDeleteAll}>Delete All </button>
     </div>
+    </>
   );
 };
 

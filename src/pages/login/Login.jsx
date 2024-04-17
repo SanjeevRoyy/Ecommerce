@@ -41,6 +41,7 @@ const Login = () => {
     return (
       <>
       <Navbar/>
+       
     <div className='ForBg'>
         <div className="login-form">
             <form onSubmit={handleLogin}>
