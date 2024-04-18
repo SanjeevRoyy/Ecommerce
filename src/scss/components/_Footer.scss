@@ -1,34 +1,60 @@
 .Footer{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 .payment{
-    background: rebeccapurple;
+    @media only screen and (max-width:400px){
+        margin-top: 10px;
+        width: 100%;
+        // display: flex;   
+        text-align: center;
+        justify-content: center;
+    }
+    // background: rebeccapurple;
     // display: flex
+    // display: flex;
+    // flex-wrap: wrap;
 
 }
 .ime{
 width: 50px;
+
 }
 .visa{
 width: 50px;    
 }
 .esewa{
     width: 50px;
+    @media only screen and (max-width:400px){
+       width: 100px;
+    }
 
 }
 .mastercard{
 width: 50px;
+@media only screen and (max-width:400px){
+    width: 100px;
+ }
 }
 .img1{
     align-items: center;
     justify-content: center;
     display: flex;
     gap: 10px;
+    @media only screen and (max-width:400px){
+        width: 100%;
+        display: flex;
+        gap: 50px;
+        margin-top: 10px;
+    }
 }
 .img2{
     align-items: center;
     justify-content: center;
     display: flex;
     gap: 10px;
+    @media only screen and (max-width:400px){
+      width: 100%;
+    }
 }

@@ -17,7 +17,7 @@ const Footer = () => {
         <p>Privacy Policy</p>
         <p>Digital Payments</p>
       </div>
-      <div className='Payment'>
+      <div className='payment'>
         <h3>Payment Methods</h3>
         <div className='img1'>
        <img className='ime' src="img/ime.png" alt="" />
