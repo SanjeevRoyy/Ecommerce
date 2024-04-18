@@ -3,16 +3,15 @@
     justify-content: space-around;
 }
 .payment{
-    display: flex;
-    img{
-        mix-blend-mode: multiply;
-    }
+    background: rebeccapurple;
+    // display: flex
+
 }
 .ime{
 width: 50px;
 }
 .visa{
-width: 50px;
+width: 50px;    
 }
 .esewa{
     width: 50px;
@@ -20,4 +19,16 @@ width: 50px;
 }
 .mastercard{
 width: 50px;
+}
+.img1{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+}
+.img2{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
 }

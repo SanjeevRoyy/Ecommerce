@@ -19,11 +19,11 @@ const Footer = () => {
       </div>
       <div className='Payment'>
         <h3>Payment Methods</h3>
-        <div>
+        <div className='img1'>
        <img className='ime' src="img/ime.png" alt="" />
        <img className='visa' src="img/visa.png" alt="" />
        </div>
-       <div>
+       <div className='img2'>
        <img className='esewa' src="img/Esewa.png" alt="" />
        <img className='mastercard' src="img/Maastercard.png" alt="" />
        </div>
