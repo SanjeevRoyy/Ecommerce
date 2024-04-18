@@ -33,7 +33,7 @@ const Cart = () => {
 
   return (
     <>
-    <Navbar/>
+    {/* <Navbar/> */}
     <div className="cart-container">
       <h2>Cart</h2>
       {cartItems.length === 0 ? (
@@ -49,9 +49,9 @@ const Cart = () => {
                 <div className="item-details">  
                   <h3>{item.title}</h3>
                   <h2>{item.quantity}</h2>
-                  <div style={{display:'flex',gap:'10px'}}>
-                  <button style={{background:'black',color:'white',fontSize:'20px', padding:'2px',height:'30px',width:'30px'} } onClick={()=>addToCart(item)}>+</button>
-                  <button style={{background:'black',color:'white',fontSize:'20px',padding:'2px',height:'30px',width:'30px'}} onClick={()=>deleteFromCart(item)}>-</button>
+                  <div className='divbtn' >
+                  <button onClick={()=>addToCart(item)}>+</button>
+                  <button onClick={()=>deleteFromCart(item)}>-</button>
                   </div>
                   <p>Price: ${item.price}</p>
                 </div>

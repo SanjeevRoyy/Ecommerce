@@ -7,7 +7,7 @@ import ImageSlider from './components/ImageSlider'
 const Home = () => {
   return (
     <div>
-        <Navbar/>
+        {/* <Navbar/> */}
         {/* <ImgSlider/> */}
         <ImageSlider />
         <SectionProduct/>

@@ -28,11 +28,10 @@
   }
   
   .item-image img {
-    width: 80px;
     height: 80px;
     object-fit: cover;
-    border-radius: 4px;
     margin-right: 20px;
+    mix-blend-mode: multiply;
   }
   
   .item-details h3 {
@@ -43,5 +42,18 @@
   .item-details p {
     margin: 5px 0 0;
     color: #888;
+  }
+  .divbtn{
+    display: flex;
+    gap: 10px;
+    button{
+      cursor: pointer;
+      background: gray;
+      width: 30px;
+      color: white;
+      height: 30px;
+      font-size: 20px;
+      // padding: 2px;
+    }
   }
   

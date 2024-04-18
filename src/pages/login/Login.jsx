@@ -40,7 +40,7 @@ const Login = () => {
 
     return (
       <>
-      <Navbar/>
+      {/* <Navbar/> */}
        
     <div className='ForBg'>
         <div className="login-form">
