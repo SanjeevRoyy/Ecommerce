@@ -2,8 +2,18 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    background: rgb(252, 182, 31);
+    // display: none;
 }
+.Customer{
+margin-top: 20px;
+}
+.About{
+    margin-top: 20px;
+}
+
 .payment{
+    margin-top: 20px;
     @media only screen and (max-width:400px){
         margin-top: 10px;
         width: 100%;
@@ -11,10 +21,7 @@
         text-align: center;
         justify-content: center;
     }
-    // background: rebeccapurple;
-    // display: flex
-    // display: flex;
-    // flex-wrap: wrap;
+   
 
 }
 .ime{
