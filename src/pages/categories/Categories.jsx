@@ -42,7 +42,16 @@ const Categories = () => {
     useEffect(() => {
         fetch('https://fakestoreapi.com/products/categories')
             .then((response) => response.json())
-            .then((data) => setCategories(data))
+            .then((data) => {
+                setCategories(data);
+               // Fetch products of the first category initially
+                if (data.length > 0) {
+                    const firstCategory = data[0];
+                    setSelectedCategory(firstCategory);
+                    fetchProductsByCategory(firstCategory);
+                }
+                
+            })
             .catch((error) => console.error('Error fetching categories:', error));
     }, []);
 
@@ -80,6 +89,7 @@ const Categories = () => {
                       <img width={100} src='/img/wm.jpg '></img>
                       <div className="vl" style={{ border: "2px solid whitesmoke", height: "50px" }}></div>
                   </div>
+
             <div className="category-list">
                 {categories.map((category, index) => (
                     <button
