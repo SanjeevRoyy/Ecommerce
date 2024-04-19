@@ -50,9 +50,9 @@ const Navbar = () => {
       </div>
       <div className={`NavbarDiv ${showNavbar ? 'show' : ''}`}>
         <Link to="/" >Home</Link>
-        <Link to="/about">Categories</Link>
-        <Link to="/payment">Blog </Link>
-        <Link to="/portfolio">cart ({cartItems.length})</Link>
+        <Link to="/categories">Categories</Link>
+        <Link to="/blog">Blog </Link>
+        <Link to="/cart">cart ({cartItems.length})</Link>
         <div className="nav-auth">
             {isLoggedIn ? (
               // If logged in, show Logout

@@ -13,9 +13,9 @@ const Router = () => {
   return (
     <Routes>
         <Route path='/' element={<Protected Component={Home}/>}/>
-        <Route path='/about' element={<Protected Component={Categories}/>}/>
-        <Route path='/payment' element={<Protected Component={Payment}/>}/>
-        <Route path='/portfolio' element={<Protected Component={Cart}/>}/>
+        <Route path='/categories' element={<Protected Component={Categories}/>}/>
+        <Route path='/blog' element={<Protected Component={Payment}/>}/>
+        <Route path='/cart' element={<Protected Component={Cart}/>}/>
         <Route path='/login' element={<Login/>}/>
     </Routes>
   )
