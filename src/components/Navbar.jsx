@@ -42,6 +42,7 @@ const Navbar = () => {
     setShowNavbar(!showNavbar);
   };
 
+
   return (
     <>
 
@@ -49,10 +50,10 @@ const Navbar = () => {
         <RxHamburgerMenu onClick={toggleNavbar}  size={30} />
       </div>
       <div className={`NavbarDiv ${showNavbar ? 'show' : ''}`}>
-        <Link to="/" >Home</Link>
-        <Link to="/categories">Categories</Link>
-        <Link to="/blog">Blog </Link>
-        <Link to="/cart">cart ({cartItems.length})</Link>
+        <Link className='link' to="/" >Home</Link>
+        <Link className='link' to="/categories">Categories</Link>
+        <Link className='link'  to="/blog">Blog </Link>
+        <Link className='link'  to="/cart">cart ({cartItems.length})</Link>
         <div className="nav-auth">
             {isLoggedIn ? (
               // If logged in, show Logout
